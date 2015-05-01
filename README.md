@@ -111,7 +111,7 @@
 ![image](./CorePPTVC/1.png)<br />
 ![image](./CorePPTVC/2.png)<br />
 ![image](./CorePPTVC/3.png)<br />
-![image](./CorePPTVC/4.png)<br />
+![image](./CorePPTVC/4.jpg)<br />
 <br /><br />
   
   
