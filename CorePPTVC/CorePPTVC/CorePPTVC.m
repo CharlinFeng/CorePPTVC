@@ -332,6 +332,8 @@
 }
 
 -(void)animForTransition{
+    
+    if(!isUseTransitionAnim) return;
     [self.clv.layer transitionWithAnimType:TransitionAnimTypeRippleEffect subType:TransitionSubtypesFromBotoom curve:TransitionCurveEaseInEaseOut duration:PPTAnimTime];
 }
 
