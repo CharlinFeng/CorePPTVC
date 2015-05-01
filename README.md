@@ -10,31 +10,18 @@
 
 
 #### 框架特性：<br />
->.1.ios版本兼容ios 7.0及以上.<br />
->.1.ios版本兼容ios 7.0及以上.<br />
->.1.ios版本兼容ios 7.0及以上.<br />
->.1.ios版本兼容ios 7.0及以上.<br />
->.1.ios版本兼容ios 7.0及以上.<br />
->.1.ios版本兼容ios 7.0及以上.<br />
->.1.ios版本兼容ios 7.0及以上.<br />
->.1.ios版本兼容ios 7.0及以上.<br />
+>.1.支持ios7及以上系统.<br />
+>.2.使用简单，传入数组即可.<br />
+>.3.支持本地数组展示，网络数据展示，以及数组实时切换.<br />
+>.4.支持子线程数据展示.<br />
+>.5.界面使用Xib定制，方便您细微调整或者人性化定制.<br />
+>.6.拥有良好的界面切换动画，多种样式可选择.<br />
+>.7.支持定时器自动切换且界面push定时器停止.<br />
+>.8.支持幻灯点击事件回调.<br />
+>.9.幻灯框架可任意扩展与自定义.<br />
+>.9.内部很多控件均可高度自定义样式，灵活性非常大.<br />
 
 
-
-
-
-<br /><br />
-#### Charlin想说：<br />
-此版本是全部的QuartzCore绘制，整个框架使用了几乎所有的QuartzCore技术，如果你有兴趣，可以看下源代码，
-算是一个比较不错的QuartzCore实战教程。
-
-对于本框架，有以下技术点和大家分享：<br />
-1.主界面使用Xib定制，如果你需要添加控件，非常方便，比如支付宝顶部有用户头像，我这里没有，所以就没加，如果你需要加，直接在xib添加即可。<br />
-2.本地数据存储使用沙盒存储。<br />
-3.无任何代理设计，全程使用block解决，引用老刘的一句话，目前代理设计模式正在被块代码所逐步取代。<br />
-4.解锁线条绘制使用的是比较复杂的奇偶裁剪技术。有兴趣可以看看苹果官方示例。<br />
-5.关于QuartzCore，使用到的技术除了基本的绘制以外，还使用了图形上下文栈，矩阵变换，刷新图层等。<br />
-6.本框架考虑了添加密码，修改密码，验证密码，忘记密码等支付宝几乎全部的功能，并且使用简单。<br />
 
 
 
@@ -43,71 +30,72 @@
 <br /><br />
 
 #### 使用示例
+        //定义数据模型。如果数据来自远程服务器，可一键转模型，写法就没这么复杂了
+        //我这里是模拟数据，写的有点多
+        PPTModel *pptModel1 = [[PPTModel alloc] init];
+        pptModel1.image = [UIImage imageNamed:@"1"];
+        pptModel1.title =@"复仇联盟2海报01";
+        
+        PPTModel *pptModel2 = [[PPTModel alloc] init];
+        pptModel2.image = [UIImage imageNamed:@"2"];
+        pptModel2.title =@"复仇联盟2海报02";
     
-    /*
-     *  设置密码
-     */
-    - (IBAction)setPwd:(id)sender {
+        PPTModel *pptModel3 = [[PPTModel alloc] init];
+        pptModel3.image = [UIImage imageNamed:@"3"];
+        pptModel3.title =@"复仇联盟2海报03";
+        
+        PPTModel *pptModel4 = [[PPTModel alloc] init];
+        pptModel4.image = [UIImage imageNamed:@"4"];
+        pptModel4.title =@"复仇联盟2海报04";
+        
+        PPTModel *pptModel5 = [[PPTModel alloc] init];
+        pptModel5.image = [UIImage imageNamed:@"5"];
+        pptModel5.title =@"复仇联盟2海报05";
         
         
-        BOOL hasPwd = [CLLockVC hasPwd];
-        hasPwd = NO;
-        if(hasPwd){
-            
-            NSLog(@"已经设置过密码了，你可以验证或者修改密码");
-        }else{
-            
-            [CLLockVC showSettingLockVCInVC:self successBlock:^(CLLockVC *lockVC, NSString *pwd) {
-                
-                NSLog(@"密码设置成功");
-                [lockVC dismiss:1.0f];
-            }];
-        }
-    }
-
-    /*
-     *  验证密码
-     */
-    - (IBAction)verifyPwd:(id)sender {
+        NSArray *pptModels = @[pptModel1,pptModel2,pptModel3,pptModel4,pptModel5];
         
-        BOOL hasPwd = [CLLockVC hasPwd];
         
-        if(!hasPwd){
-            
-            NSLog(@"你还没有设置密码，请先设置密码");
-        }else {
-            
-            [CLLockVC showVerifyLockVCInVC:self forgetPwdBlock:^{
-                NSLog(@"忘记密码");
-            } successBlock:^(CLLockVC *lockVC, NSString *pwd) {
-                NSLog(@"密码正确");
-                [lockVC dismiss:1.0f];
-            }];
-        }
-    }
-
-
-    /*
-     *  修改密码
-     */
-    - (IBAction)modifyPwd:(id)sender {
+        CorePPTVC *pptvc = [[CorePPTVC alloc] init];
         
-        BOOL hasPwd = [CLLockVC hasPwd];
+        //传递数据：模拟延时网络请求
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(8.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                pptvc.pptModels = @[pptModel1,pptModel2,pptModel5];
+            });
+        });
         
-        if(!hasPwd){
-            
-            NSLog(@"你还没有设置密码，请先设置密码");
-            
-        }else {
-            
-            [CLLockVC showModifyLockVCInVC:self successBlock:^(CLLockVC *lockVC, NSString *pwd) {
-                
-                [lockVC dismiss:.5f];
-            }];
-        }
-
-    }
-
+        //模拟服务器数据更新
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(16.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            pptvc.pptModels = pptModels;
+        });
+        
+        //可使用autolayout
+        pptvc.view.frame = CGRectMake(0, 64,320, 190);
+        
+        pptvc.pptItemClickBlock = ^(PPTModel *pptModel){
+            NSLog(@"点击：%@",pptModel.title);
+        };
+        
+        //重点，切记要加这句，不加后果非常严重
+        [self addChildViewController:pptvc];
+        [self.view addSubview:pptvc.view];
+    
+    
+#### 重要说明;<br /><br />
+1.如果自定义界面？<br />
+界面是xib做的，你想怎么弄都行。<br /><br />
+2.如何细微自定义？<br />
+请查阅并修改const文件。<br /><br />
+3.如果自定义pageControl？<br />
+pagecontrol是个自定义控件，请查阅：
+高度自定义的pageControl 
+https://github.com/nsdictionary/CorePageControl
+<br /><br />
+4.觉得本框架还行？<br />
+请使劲的star、fork吧！5.1我都还在给大家做框架呢。是不是有点幸苦??哈哈<br /><br />
+    
+    
 
   
   <br /><br />
@@ -134,7 +122,7 @@
 
 #### 版权说明 RIGHTS <br />
 作品说明：本框架由iOS开发攻城狮Charlin制作。<br />
-作品时间： 2015.04.26 18:07<br />
+作品时间： 2015.05.01 18:07<br />
 #### 关于Chariln INTRODUCE <br />
 作者简介：Charlin-四川成都华西都市报旗下华西都市网络有限公司技术部iOS工程师！<br /><br />
 
