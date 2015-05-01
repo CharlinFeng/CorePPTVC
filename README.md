@@ -82,7 +82,9 @@
         [self.view addSubview:pptvc.view];
     
     
-#### 重要说明;<br /><br />
+    <br /><br />
+    
+#### 重要说明<br /><br />
 1.如果自定义界面？<br />
 界面是xib做的，你想怎么弄都行。<br /><br />
 2.如何细微自定义？<br />
