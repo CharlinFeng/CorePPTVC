@@ -80,10 +80,9 @@
         //重点，切记要加这句，不加后果非常严重
         [self addChildViewController:pptvc];
         [self.view addSubview:pptvc.view];
-    
-    
-    <br /><br />
-    
+
+
+ <br /><br />
 #### 重要说明<br /><br />
 1.如果自定义界面？<br />
 界面是xib做的，你想怎么弄都行。<br /><br />
