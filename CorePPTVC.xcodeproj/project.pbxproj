@@ -79,6 +79,7 @@
 		D64042BC1AF340C00013A953 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = D64042B91AF340C00013A953 /* 1.png */; };
 		D64042BD1AF340C00013A953 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = D64042BA1AF340C00013A953 /* 2.png */; };
 		D64042BE1AF340C00013A953 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = D64042BB1AF340C00013A953 /* 3.png */; };
+		D64042C01AF3449A0013A953 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D64042BF1AF3449A0013A953 /* 4.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,6 +203,7 @@
 		D64042B91AF340C00013A953 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		D64042BA1AF340C00013A953 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		D64042BB1AF340C00013A953 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		D64042BF1AF3449A0013A953 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +262,7 @@
 		89804AA31AF1DB9F00787135 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D64042BF1AF3449A0013A953 /* 4.jpg */,
 				D64042B91AF340C00013A953 /* 1.png */,
 				D64042BA1AF340C00013A953 /* 2.png */,
 				D64042BB1AF340C00013A953 /* 3.png */,
@@ -682,6 +685,7 @@
 				89804C2D1AF211C500787135 /* 8B5C05F5-4175-4987-ACC4-53FB3225EA8C.codesnippet in Resources */,
 				89804C1D1AF211C500787135 /* 05D1EB67-DA6A-4AE2-AE04-A683B5065ECA.codesnippet in Resources */,
 				89804ADD1AF1DD7600787135 /* CorePPTVC.xib in Resources */,
+				D64042C01AF3449A0013A953 /* 4.jpg in Resources */,
 				89804C211AF211C500787135 /* 1EDB0718-DC41-4322-9086-4B4E50E2FDC5.codesnippet in Resources */,
 				89804C1F1AF211C500787135 /* 0FD636EB-A690-4719-90F7-19572E156EDF.codesnippet in Resources */,
 				89804C271AF211C500787135 /* 62CB9255-14CC-4D2F-B039-D1C7F75FF239.codesnippet in Resources */,

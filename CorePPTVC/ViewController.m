@@ -50,14 +50,17 @@
     CorePPTVC *pptvc = [[CorePPTVC alloc] init];
     
     //传递数据
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        pptvc.pptModels = pptModels;
-//    });
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(8.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             pptvc.pptModels = @[pptModel1,pptModel2,pptModel5];
-//        });
-//    });
+        });
+    });
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(16.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        pptvc.pptModels = pptModels;
+    });
+    
 
     pptvc.view.frame = CGRectMake(0, 64,320, 190);
     

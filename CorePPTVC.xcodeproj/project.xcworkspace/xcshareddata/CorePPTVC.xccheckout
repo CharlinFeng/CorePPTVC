@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8CE604C2-92C0-4F7A-A870-4FFF7BD69795</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CorePPTVC</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>701CD59536EE58AFBE99DCCE412796C5CDA6FA63</key>
+		<string>https://github.com/nsdictionary/CorePPTVC.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CorePPTVC.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>701CD59536EE58AFBE99DCCE412796C5CDA6FA63</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/nsdictionary/CorePPTVC.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>701CD59536EE58AFBE99DCCE412796C5CDA6FA63</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>701CD59536EE58AFBE99DCCE412796C5CDA6FA63</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CorePPTVC</string>
+		</dict>
+	</array>
+</dict>
+</plist>
