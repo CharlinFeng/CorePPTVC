@@ -17,6 +17,8 @@
 /** 图片 */
 @property (nonatomic,strong) UIImage *image;
 
+/** 远程服务器地址 */
+@property (nonatomic,copy) NSString *imageURLString;
 
 /** 图片说明文字：标题 */
 @property (nonatomic,copy) NSString *title;

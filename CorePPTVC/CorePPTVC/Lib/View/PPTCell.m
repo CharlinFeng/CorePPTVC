@@ -7,7 +7,7 @@
 //
 
 #import "PPTCell.h"
-
+#import "UIImageView+SD.h"
 
 static NSString *const rid= @"PPTCell";
 
@@ -78,7 +78,14 @@ static NSString *const rid= @"PPTCell";
  */
 -(void)dataFill{
     
-    _imageV.image = _pptModel.image;
+    if(_pptModel.imageURLString == nil){
+        
+        _imageV.image = _pptModel.image;
+    }else{
+        
+        [_imageV imageWithUrlStr:_pptModel.imageURLString phImage:nil];
+    }
+    
 }
 
 
