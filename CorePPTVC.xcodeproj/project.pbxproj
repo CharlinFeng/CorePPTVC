@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8923C2C71B4B94E900E6CFEE /* CoreStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 8923C2BE1B4B94E900E6CFEE /* CoreStatus.m */; };
+		8923C2C81B4B94E900E6CFEE /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8923C2C41B4B94E900E6CFEE /* Reachability.m */; };
 		89422A041B0DB14900158F87 /* UIImage+ReMake.m in Sources */ = {isa = PBXBuildFile; fileRef = 894229DB1B0DB14900158F87 /* UIImage+ReMake.m */; };
 		89422A051B0DB14900158F87 /* CoreSDWebImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 894229DD1B0DB14900158F87 /* CoreSDWebImage.bundle */; };
 		89422A061B0DB14900158F87 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 894229E01B0DB14900158F87 /* MKAnnotationView+WebCache.m */; };
@@ -113,6 +115,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8923C2BD1B4B94E900E6CFEE /* CoreStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreStatus.h; sourceTree = "<group>"; };
+		8923C2BE1B4B94E900E6CFEE /* CoreStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreStatus.m; sourceTree = "<group>"; };
+		8923C2C01B4B94E900E6CFEE /* CoreNetworkStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreNetworkStatus.h; sourceTree = "<group>"; };
+		8923C2C11B4B94E900E6CFEE /* CoreStatusProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreStatusProtocol.h; sourceTree = "<group>"; };
+		8923C2C31B4B94E900E6CFEE /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		8923C2C41B4B94E900E6CFEE /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		8923C2C61B4B94E900E6CFEE /* CoreStatusSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreStatusSingleton.h; sourceTree = "<group>"; };
 		894229DA1B0DB14900158F87 /* UIImage+ReMake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ReMake.h"; sourceTree = "<group>"; };
 		894229DB1B0DB14900158F87 /* UIImage+ReMake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ReMake.m"; sourceTree = "<group>"; };
 		894229DD1B0DB14900158F87 /* CoreSDWebImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CoreSDWebImage.bundle; sourceTree = "<group>"; };
@@ -284,6 +293,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8923C2BC1B4B94E900E6CFEE /* CoreStatus */ = {
+			isa = PBXGroup;
+			children = (
+				8923C2BD1B4B94E900E6CFEE /* CoreStatus.h */,
+				8923C2BE1B4B94E900E6CFEE /* CoreStatus.m */,
+				8923C2BF1B4B94E900E6CFEE /* Lib */,
+			);
+			path = CoreStatus;
+			sourceTree = "<group>";
+		};
+		8923C2BF1B4B94E900E6CFEE /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				8923C2C01B4B94E900E6CFEE /* CoreNetworkStatus.h */,
+				8923C2C11B4B94E900E6CFEE /* CoreStatusProtocol.h */,
+				8923C2C21B4B94E900E6CFEE /* Reachability */,
+				8923C2C51B4B94E900E6CFEE /* Singleton */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		8923C2C21B4B94E900E6CFEE /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				8923C2C31B4B94E900E6CFEE /* Reachability.h */,
+				8923C2C41B4B94E900E6CFEE /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		8923C2C51B4B94E900E6CFEE /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				8923C2C61B4B94E900E6CFEE /* CoreStatusSingleton.h */,
+			);
+			path = Singleton;
+			sourceTree = "<group>";
+		};
 		894229D71B0DB14900158F87 /* CoreSDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -501,6 +548,7 @@
 		89804BB01AF211C500787135 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				8923C2BC1B4B94E900E6CFEE /* CoreStatus */,
 				894229D71B0DB14900158F87 /* CoreSDWebImage */,
 				89804C461AF215B300787135 /* CoreCategory */,
 				89804C3B1AF211D000787135 /* CorePageControl */,
@@ -911,6 +959,7 @@
 				89804AA91AF1DB9F00787135 /* AppDelegate.m in Sources */,
 				89422A0C1B0DB14900158F87 /* SDWebImageDownloaderOperation.m in Sources */,
 				89804C8B1AF215B300787135 /* UIImage+Extend.m in Sources */,
+				8923C2C71B4B94E900E6CFEE /* CoreStatus.m in Sources */,
 				89804C8C1AF215B300787135 /* UIImage+FixOrientation.m in Sources */,
 				89422A091B0DB14900158F87 /* SDWebImageCompat.m in Sources */,
 				89422A071B0DB14900158F87 /* NSData+ImageContentType.m in Sources */,
@@ -923,6 +972,7 @@
 				89422A161B0DB14900158F87 /* UIButton+SD.m in Sources */,
 				89804AA61AF1DB9F00787135 /* main.m in Sources */,
 				89422A151B0DB14900158F87 /* UIView+WebCacheOperation.m in Sources */,
+				8923C2C81B4B94E900E6CFEE /* Reachability.m in Sources */,
 				89422A061B0DB14900158F87 /* MKAnnotationView+WebCache.m in Sources */,
 				89804C451AF2123800787135 /* PPTPageControl.m in Sources */,
 				89804C421AF211D000787135 /* SMPageControl.m in Sources */,

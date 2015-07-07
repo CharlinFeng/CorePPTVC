@@ -8,11 +8,11 @@
 
 #import "ViewController.h"
 #import "CorePPTVC.h"
+#import "CoreStatus.h"
 
 
 
-
-@interface ViewController ()
+@interface ViewController ()<CoreStatusProtocol>
 
 @end
 
@@ -72,7 +72,17 @@
     [self.view addSubview:pptvc.view];
     
     
+    [CoreStatus beginNotiNetwork:self];
     
 }
+
+-(void)coreNetworkChangeNoti:(NSNotification *)noti{
+
+
+    NSLog(@"%@",[CoreStatus currentNetWorkStatusString]);
+}
+
+
+
 
 @end
